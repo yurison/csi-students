@@ -1,0 +1,37 @@
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, russian]{babel}
+
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{graphicx}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13}
+\pgfplotsset{grid = major, grid style = {dashed}}
+
+%Change label separator
+\usepackage{caption}
+\captionsetup[table]{labelformat=simple, labelsep = endash}
+\captionsetup[figure]{labelformat=simple, labelsep = endash}
+
+\usepackage{subcaption}
+
+\usepackage{amsmath}
+\begin{document}
+	
+\begin{subfigure}[b]{0.5\textwidth} 
+        \centering
+        \begin{tikzpicture}
+           \begin{axis}[
+           xlabel=$x$,
+           ylabel={$f(x) = x^2 - x +4$}
+           ]
+           % use TeX as calculator:
+           \addplot {x^2 - x +4};
+           \end{axis}
+        \end{tikzpicture}
+       \caption{Устойчивая система.}
+   \end{subfigure}
+\end{document}

@@ -1,13 +1,26 @@
-\documentclass[a4paper, 11pt] {article}
+\documentclass[a4paper, 11pt]{article}
 
+\usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[T1, T2A]{fontenc}
 \usepackage[english, russian]{babel}
-\usepackage{graphicx}
-\usepackage[top=2cm, left=2cm, right=2cm, left=2cm]{geometry}
+\usepackage[top=2cm, bottom=2cm, right=2cm, left=2cm]{geometry}
 \usepackage{amsmath}
-\newcommand\tline[2]{$\underset{\text{#1}}{\text{\underline{\hspace{#2}}}}$}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{tabularx}
 
+\usepackage{amsmath,booktabs}
+\usepackage{array}
+
+\usepackage{tabu}
+\newcommand\tline[2]{$\underset{\text{#1}}{\text{\underline{\hspace{#2}}}}$}
+%Change label separator
+\usepackage{caption}
+\captionsetup[table]{labelformat=simple, labelsep = endash}
+\captionsetup[figure]{labelformat=simple, labelsep = endash}
+
+\usepackage{indentfirst}
 \begin{document}
 	\begin{titlepage}
 		\centering
@@ -29,7 +42,7 @@
 
 		\flushleft
 
-		{Выполнил \hspace{2cm}\underline{Та М.Ш}\tline{(фамилия, и.о.)}{9cm} (подпись)} \\
+		{Выполнил \hspace{2cm} \tline{(фамилия, и.о.)}{9cm} (подпись)} \\
 		\vspace{2cm}
 
 		{Проверил \hspace{2cm} \tline{(фамилия, и.о.)}{9cm} (подпись)} \\
@@ -43,42 +56,45 @@
 
 	\end{titlepage}
 
-\section*{Цель работы}
-Ознакомление с экспериментальными методами построения областей устойчивости линейных динамических систем и изучение влияния на устойчивость системы ее параметров.
+
+\paragraph{Цель работы: }Ознакомление с экспериментальными методами построения областей устойчивости линейных динамических систем и изучение влияния на устойчивость системы ее параметров.
 
 \section{Собрать схему моделирования, установив значение постоянной времени}
 
 
 \begin{figure}[h]
-	\centering
+	
 	\center{\includegraphics[width=0.7\linewidth]{0.png}}
-	\caption{Схема моделирования}
-	\label{fig:0}
+	\\
+	\centering Рисунок 1 - Схема моделирования
+	
 \end{figure}
 
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=0.7\linewidth]{1}
-	\caption{Графика неустойчивости САУ}
-	\label{fig:1}
+
+	\center{\includegraphics[width=0.7\linewidth]{1}}
+	\\
+		\centering Рисунок 2 - Графика неустойчивости САУ
 \end{figure}
 
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=0.7\linewidth]{2}
-	\caption{Графика САУ на границе устойчивости}
-	\label{fig:2}
+	
+	\center{\includegraphics[width=0.7\linewidth]{2}}
+	\\
+	\centering Рисунок 3 - Графика САУ на границе устойчивости
 \end{figure}
 
 \begin{center}
 	\includegraphics[width=0.7\linewidth]{3}
-\begin{figure}[h]
-		\caption{Графика устойчивости САУ}
-	\label{fig:3}
-\end{figure}
+	\\
+\centering Рисунок 4 - Графика устойчивости САУ
+	
+
 \end{center}
 
-\section{Построим экспериментальную границу устойчивости}
+\newpage
+\section{Анализ устойчивости системы}
+\subsection{Построим экспериментальную границу устойчивости}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
 	\hline 
@@ -88,81 +104,52 @@
 	\hline 
 \end{tabular} 
 \end{center}
-\section{Теоретический расчет границы устойчивости с использованием критерия Гурвица}
+\subsection{Теоретический расчет границы устойчивости с использованием критерия Гурвица}
 
-% MathType!MTEF!2!1!+-
-% feaagGart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
-% hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
-% 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq-Jc9
-% vqaqpepm0xbba9pwe9Q8fs0-yqaqpepae9pg0FirpepeKkFr0xfr-x
-% fr-xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGcbaGaam4vaiaacI
-% cacaWGZbGaaiykaiabg2da9maalaaabaGaaiikaiaaiodacaWGZbGa
-% ey4kaSIaaGymaiaacMcacaGGOaGaaiivamaaBaaaleaacaaIYaaabe
-% aakiaadohacqGHRaWkcaaIXaGaaiykaiaacohaaeaacaGGOaGaaG4m
-% aiaadohacqGHRaWkcaaIXaGaaiykaiaacIcacaGGubWaaSbaaSqaai
-% aaikdaaeqaaOGaam4CaiabgUcaRiaaigdacaGGPaGaam4CaiabgUca
-% RiaadUgaaaaaaa!52BF!
-    Передаточная функция  \[W(s) = \frac{{(3s + 1)({T_2}s + 1)s}}{{(3s + 1)({T_2}s + 1)s + k}}\]
-% MathType!MTEF!2!1!+-
-% feaagGart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
-% hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
-% 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq-Jc9
-% vqaqpepm0xbba9pwe9Q8fs0-yqaqpepae9pg0FirpepeKkFr0xfr-x
-% fr-xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGceaqabeaacaGGOa
-% GaaG4maiaadohacqGHRaWkcaaIXaGaaiykaiaacIcacaGGubWaaSba
-% aSqaaiaaikdaaeqaaOGaam4CaiabgUcaRiaaigdacaGGPaGaam4Cai
-% abgUcaRiaadUgacqGH9aqpcaaIWaaabaGaeyi1HSTaaG4maiaadsfa
-% daWgaaWcbaGaaGOmaaqabaGccaWGZbWaaWbaaSqabeaacaaIZaaaaO
-% Gaey4kaSIaaiikaiaaiodacqGHRaWkcaWGubWaaSbaaSqaaiaaikda
-% aeqaaOGaaiykaiaadohadaahaaWcbeqaaiaaikdaaaGccqGHRaWkca
-% WGZbGaey4kaSIaam4Aaiabg2da9iaaicdaaaaa!58B5!
+
+    Передаточная функция 
+    \begin{equation}
+      W(s) = \frac{{(3s + 1)({T_2}s + 1)s}}{{(3s + 1)({T_2}s + 1)s + k}}
+    \end{equation}
+
 \[\begin{array}{l}
 (3s + 1)({T_2}s + 1)s + k = 0\\
 \Leftrightarrow 3{T_2}{s^3} + (3 + {T_2}){s^2} + s + k = 0
 \end{array}\]
 
-Матрица Гурвицы % MathType!MTEF!2!1!+-
-% feaagGart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
-% hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
-% 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq-Jc9
-% vqaqpepm0xbba9pwe9Q8fs0-yqaqpepae9pg0FirpepeKkFr0xfr-x
-% fr-xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGcbaGaamyqaiabg2
-% da9maabmaabaqbaeqabiGaaaqaaiaaiodacqGHRaWkcaWGubWaaSba
-% aSqaaiaaikdaaeqaaaGcbaGaam4AaaqaaiaaiodacaWGubWaaSbaaS
-% qaaiaaikdaaeqaaaGcbaGaaGymaaaaaiaawIcacaGLPaaaaaa!40F7!
-\[A = \left( {\begin{array}{*{20}{c}}
-	{3 + {T_2}}&k\\
-	{3{T_2}}&1
-	\end{array}} \right)\]
+Для анализа устойчивости системы составим матрицу Гурвица.
+\begin{equation}
+A = \begin{bmatrix}
+3 + T_2 &  k & 0 \\
+3 T_2 & 1 & 0 \\
+0 & 3 + T_2 & 1
+\end{bmatrix}
+\end{equation}
+
 САУ устойчивость на границе когда % MathType!MTEF!2!1!+-
-% feaagGart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
-% hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
-% 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq-Jc9
-% vqaqpepm0xbba9pwe9Q8fs0-yqaqpepae9pg0FirpepeKkFr0xfr-x
-% fr-xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGcbaGaeyiLdqKaey
-% ypa0JaaiikaiaaiodacqGHRaWkcaWGubWaaSbaaSqaaiaaikdaaeqa
-% aOGaaiykaiabgkHiTiaaiodacaWGubWaaSbaaSqaaiaaikdaaeqaaO
-% Gaam4Aaiabg2da9iaaicdaaaa!434A!
-\[\Delta  = (3 + {T_2}) - 3{T_2}k = 0\]
-% MathType!MTEF!2!1!+-
-% feaagGart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
-% hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
-% 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq-Jc9
-% vqaqpepm0xbba9pwe9Q8fs0-yqaqpepae9pg0FirpepeKkFr0xfr-x
-% fr-xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGcbaGaam4Aaiabg2
-% da9maalaaabaGaaG4maiabgUcaRiaadsfadaWgaaWcbaGaaGOmaaqa
-% baaakeaacaaIZaGaamivamaaBaaaleaacaaIYaaabeaaaaaaaa!3DE3!
-\[k = \frac{{3 + {T_2}}}{{3{T_2}}}\]
+\begin{equation}
+\begin{cases}
+3 + T_2 - k 3 T_2 = 0 \\
+3 + T_2 > 0 \\
+K > 0
+\end{cases}
+\end{equation}
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.7\linewidth]{4}
-	\caption{Графика границы устойчивости САУ}
-	\label{fig:4}
-\end{figure}
+\begin{equation}
+k =\frac{3 + T_2}{3T_2}
+\end{equation}
 
+\begin{center}
+		\includegraphics[width=0.7\linewidth]{4}
+		\\
+	\centering  Рисунок 5 - Графика границы устойчивости САУ
+
+	
+\end{center}
+
+\newpage
 \section*{Выводы}
-При проектировании систем большое значение имеет определение областей устойчивости в плоскости реальных параметров, присущих системе. Система является устойчивой ,соответственно, множество значений параметров находится ниже границы устойчивости (при % MathType!MTEF!2!1!+-
+При проектировании систем большое значение имеет определение областей устойчивости в плоскости реальных параметров, присущих системе. Аналитическую оценку позволил получить критерий Гурциа. Соотвественно по составленной матрице (2) мы смогли получить и составить условия границы устойчивоси (3) и (4). Система является устойчивой ,соответственно, множество значений параметров находится ниже границы устойчивости (при % MathType!MTEF!2!1!+-
 % feaagGart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
 % hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
 % 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq-Jc9
@@ -170,5 +157,5 @@
 % fr-xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGcbaGaam4saiabgs
 % MiJoaalaaabaGaaG4maiabgUcaRiaadsfadaWgaaWcbaGaaGOmaaqa
 % baaakeaacaaIZaGaamivamaaBaaaleaacaaIYaaabeaaaaaaaa!3E72!
-\ k \le \frac{{3 + {T_2}}}{{3{T_2}}}\)
+$\ k \le \frac{{3 + {T_2}}}{{3{T_2}}}$)
 \end{document}
