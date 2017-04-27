@@ -1,22 +1,30 @@
 \documentclass[a4paper, 11pt]{article}
+
+\usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[english,russian]{babel}
-\usepackage[T1, T2A]{fontenc}
-\usepackage{graphicx}
-\usepackage{multirow}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.9}
-\usepackage[left = 2cm, right = 2cm, bottom = 2cm, top = 2cm]{geometry}
-\usepackage{listings}             % Include the listings-package
-
-\usepackage[top=2cm, left=2cm, right=2cm, left=2cm]{geometry}
+\usepackage[english, russian]{babel}
+\usepackage[top=2cm, bottom=2cm, right=2cm, left=2cm]{geometry}
 \usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{tabularx}
 
-\graphicspath{{image/}}
+\usepackage{amsmath,booktabs}
+\usepackage{array}
 
+\usepackage{tabu}
 \newcommand\tline[2]{$\underset{\text{#1}}{\text{\underline{\hspace{#2}}}}$}
+%Change label separator
+\usepackage{caption}
+\captionsetup[figure]{name = Рисунок, labelsep = endash}
+\captionsetup[table]{name = Таблица, labelsep = endash}
+
+\usepackage{indentfirst}
+
 
 \begin{document}
+	\parindent=1.27cm
 	\begin{titlepage}
 		\centering
 		{\fontsize{12pt}{5cm}\selectfont \bfseries Министерство образования и науки Российской Федерации} \\ \vspace{0.5cm}
@@ -48,27 +56,26 @@
 
 \end{titlepage}
 
-\section*{Цель работы}
-Исследование точностных свойств систем управления.
+\paragraph{Цель работы: }Исследование точностных свойств систем управления.
+\paragraph{Исходные данные} Ниже в таблице 1 представленны параметры системы и возмущающих воздействий.
 
-\section{Исследование системы с астатизмом нулевого порядка}
-\begin{figure}[h]
+\begin{table} [h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{11.png}
-	\caption{Структурная схема моделируемой системы}
-	\label{fig:3}
-\end{figure}
+	\caption{Исходные данные.}
+	\tabulinesep = 2mm
+	\begin{tabu} spread 1em{|c|c|c|c|c|c|c|c|}
+		\hline
+		$W(s)$ & $g = A$ & $g = Vt$ & $g = at^2/2$ & Вариант схемы & $f_1$ & $f_2$ & Сигнал задания \\  \hline
+		$\aligned \frac{1}{0.5s^{2} +s + 1} \endaligned$ & 2 & 2t & $0.45t^2$ &  г) & -0.5 & 0,25 & $0.3t + 2\sin{(0.8t)}$ \rule{0pt}{5pt} \\ 
+		\hline
+	\end{tabu}
+\end{table}
 
-Задана замкнутая система с регулятором H(s)=k и передаточной функцией разомкнутого контура % MathType!MTEF!2!1!+-
-% feaagGart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
-% hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
-% 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq-Jc9
-% vqaqpepm0xbba9pwe9Q8fs0-yqaqpepae9pg0FirpepeKkFr0xfr-x
-% fr-xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGcbaGaam4vaiaacI
-% cacaWGZbGaaiykaiabg2da9maalaaabaGaaGymaaqaaiaaicdacaGG
-% UaGaaGynaiaadohadaahaaWcbeqaaiaaikdaaaGccqGHRaWkcaWGZb
-% Gaey4kaSIaaGymaaaaaaa!4280!
-\[W(s) = \frac{1}{{0.5{s^2} + s + 1}}\]
+\section{Исследование системы с астатизмом нулевого порядка}\hfill\par
+Задана замкнутая система с регулятором $H(s)=k$ и передаточной функцией разомкнутого контура 
+\begin{equation}
+W(s) = \frac{1}{{0.5{s^2} + s + 1}}
+\end{equation}
 
 \begin{figure}[h]
 	\centering
@@ -77,32 +84,12 @@
 	\label{fig:12}
 \end{figure}
 
-\subsection{Исследование стационарного режима работы при g(t)=2}
+\subsection{Исследование стационарного режима работы при g(t)=2}\hfill\par
 Рассчитаем предельное значение установившейся ошибки
-\vspace{0.5cm}
 
-% MathType!MTEF!2!1!+-
-% feaagGart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
-% hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
-% 4rNCHbGeaGqiVCI8FfYJH8YrFfeuY-Hhbbf9v8qqaqFr0xc9pk0xbb
-% a9q8WqFfeaY-biLkVcLq-JHqpepeea0-as0Fb9pgeaYRXxe9vr0-vr
-% 0-vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaabaaaaaaaaape
-% GaeqyTduMaeyypa0ZaaSaaa8aabaWdbiaaigdaa8aabaWdbiaaigda
-% cqGHRaWkcaWGibWaaeWaa8aabaWdbiaadohaaiaawIcacaGLPaaaca
-% WGxbWaaeWaa8aabaWdbiaadohaaiaawIcacaGLPaaaaaGaam4ramaa
-% bmaapaqaa8qacaWGZbaacaGLOaGaayzkaaWdaiabg2da9maaxababa
-% GaciiBaiaacMgacaGGTbaaleaacaWGZbGaeyOKH4QaaGimaaqabaGc
-% caWGZbWaaSaaaeaacaaIXaaabaGaaGymaiabgUcaRmaalaaabaGaam
-% 4AaaqaaiaaicdacaGGUaGaaGynaiaadohadaahaaWcbeqaaiaaikda
-% aaGccqGHRaWkcaWGZbGaey4kaSIaaGymaaaaaaWaaSaaaeaacaaIYa
-% aabaGaam4CaaaacqGH9aqpdaWfqaqaaiGacYgacaGGPbGaaiyBaaWc
-% baGaam4CaiabgkziUkaaicdaaeqaaOWaaSaaaeaacaWGZbWaaWbaaS
-% qabeaacaaIYaaaaOGaey4kaSIaaGOmaiaadohacqGHRaWkcaaIYaaa
-% baGaaGimaiaac6cacaaI1aGaam4CamaaCaaaleqabaGaaGOmaaaaki
-% abgUcaRiaadohacqGHRaWkcaaIXaGaey4kaSIaam4AaaaacqGH9aqp
-% daWcaaqaaiaaikdaaeaacaaIXaGaey4kaSIaam4Aaaaaaaa!76D0!
-$\varepsilon  = \frac{1}{{1 + H\left( s \right)W\left( s \right)}}G\left( s \right) = \mathop {\lim }\limits_{s \to 0} s\frac{1}{{1 + \frac{k}{{0.5{s^2} + s + 1}}}}\frac{2}{s} = \mathop {\lim }\limits_{s \to 0} \frac{{{s^2} + 2s + 2}}{{0.5{s^2} + s + 1 + k}} = \frac{2}{{1 + k}}$
-\vspace{0.5cm}
+\begin{equation}
+\varepsilon  = \frac{1}{{1 + H\left( s \right)W\left( s \right)}}G\left( s \right) = \mathop {\lim }\limits_{s \to 0} s\frac{1}{{1 + \frac{k}{{0.5{s^2} + s + 1}}}}\frac{2}{s} = \mathop {\lim }\limits_{s \to 0} \frac{{{s^2} + 2s + 2}}{{0.5{s^2} + s + 1 + k}} = \frac{2}{{1 + k}}
+\end{equation}
 
 таким образом, найдём ощибки для различных значений $k$:
 $\varepsilon=1 (k=1), \varepsilon=0.33 (k=5), \varepsilon=0.18 (k=10)$
@@ -123,115 +110,64 @@ $\varepsilon=1 (k=1), \varepsilon=0.33 (k=5), \varepsilon=0.18 (k=10)$
 	\label{fig:2}
 \end{figure}
 
-\subsection{Исследование режима движения с постоянной скоростью при g(t)=2t}
-Рассчитаем предельное значение установившейся ошибки
-
-\vspace{0.5cm}
-% MathType!MTEF!2!1!+-
-% feaagGart1ev2aqatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
-% hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
-% 4rNCHbGeaGqiVCI8FfYJH8YrFfeuY-Hhbbf9v8qqaqFr0xc9pk0xbb
-% a9q8WqFfeaY-biLkVcLq-JHqpepeea0-as0Fb9pgeaYRXxe9vr0-vr
-% 0-vqpWqaaeaabiGaciaacaqabeaadaqaaqaaaOqaaabaaaaaaaaape
-% GaeqyTduMaeyypa0ZaaSaaa8aabaWdbiaaigdaa8aabaWdbiaaigda
-% cqGHRaWkcaWGibWaaeWaa8aabaWdbiaadohaaiaawIcacaGLPaaaca
-% WGxbWaaeWaa8aabaWdbiaadohaaiaawIcacaGLPaaaaaGaam4ramaa
-% bmaapaqaa8qacaWGZbaacaGLOaGaayzkaaWdaiabg2da9maaxababa
-% GaciiBaiaacMgacaGGTbaaleaacaWGZbGaeyOKH4QaaGimaaqabaGc
-% caWGZbWaaSaaaeaacaaIXaaabaGaaGymaiabgUcaRmaalaaabaGaam
-% 4AaaqaaiaaicdacaGGUaGaaGynaiaadohadaahaaWcbeqaaiaaikda
-% aaGccqGHRaWkcaWGZbGaey4kaSIaaGymaaaaaaWaaSaaaeaacaaIYa
-% aabaGaam4CamaaCaaaleqabaGaaGOmaaaaaaGccqGH9aqpdaWfqaqa
-% aiGacYgacaGGPbGaaiyBaaWcbaGaam4CaiabgkziUkaaicdaaeqaaO
-% WaaSaaaeaacaaIWaGaaiOlaiaaiwdacaWGZbWaaWbaaSqabeaacaaI
-% YaaaaOGaey4kaSIaam4CaiabgUcaRiaaigdaaeaacaaIWaGaaiOlai
-% aaiwdacaWGZbWaaWbaaSqabeaacaaIYaaaaOGaey4kaSIaam4Caiab
-% gUcaRiaaigdacqGHRaWkcaWGRbaaamaalaaabaGaaGOmaaqaaiaado
-% haaaGaeyypa0JaeyOhIukaaa!790D!
-$\varepsilon  = \frac{1}{{1 + H\left( s \right)W\left( s \right)}}G\left( s \right) = \mathop {\lim }\limits_{s \to 0} s\frac{1}{{1 + \frac{k}{{0.5{s^2} + s + 1}}}}\frac{2}{{{s^2}}} = \mathop {\lim }\limits_{s \to 0} \frac{{0.5{s^2} + s + 1}}{{0.5{s^2} + s + 1 + k}}\frac{2}{s} = \infty $
-
-
+\subsection{Исследование режима движения с постоянной скоростью при g(t)=2t}\hfill\par
+Рассчитаем предельное значение установившейся ошибки\\
+\begin{equation}
+\varepsilon  = \frac{1}{{1 + H\left( s \right)W\left( s \right)}}G\left( s \right) = \mathop {\lim }\limits_{s \to 0} s\frac{1}{{1 + \frac{k}{{0.5{s^2} + s + 1}}}}\frac{2}{{{s^2}}} = \mathop {\lim }\limits_{s \to 0} \frac{{0.5{s^2} + s + 1}}{{0.5{s^2} + s + 1 + k}}\frac{2}{s} = \infty 
+\end{equation}
 \begin{center}
-	\includegraphics[width=0.7\linewidth]{33}
+
 	\begin{figure}[h]
 		\centering
-		
+			\includegraphics[width=0.7\linewidth]{33}
 		\caption{Графика ошибки е(t)}
 		\label{fig:33}
 	\end{figure}
 \end{center}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{44}
 	\caption{Графика переходных процессов}
 	\label{fig:44}
 \end{figure}
-
-\section{Исследование системы с астатизмом первого порядка.}
-
-
-\begin{center}
-	\includegraphics[width=0.6\linewidth]{5}
-	\begin{figure}
-	
+\hfill\\*
+\newpage
+\section{Исследование системы с астатизмом первого порядка.}\hfill\par
 		
+	\begin{figure}[h]
+	\center\includegraphics[width=0.6\linewidth]{5}
 		\caption{Схема моделирования}
 		\label{fig:5}
 	\end{figure}
-\end{center}
 
-\subsection{Исследование стационарного режима работы при g(t)=2}
+\subsection{Исследование стационарного режима работы при g(t)=2}\hfill\par
 Рассчитаем предельное значение установившейся ошибки
-% MathType!MTEF!2!1!+-
-% feaagGart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
-% hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
-% 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq-Jc9
-% vqaqpepm0xbba9pwe9Q8fs0-yqaqpepae9pg0FirpepeKkFr0xfr-x
-% fr-xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGcbaGaamyzamaaBa
-% aaleaacaWG5baabeaakiaacIcacaWG0bGaaiykaiabg2da9maaxaba
-% baGaciiBaiaacMgacaGGTbaaleaacaWGZbGaeyOKH4QaaGimaaqaba
-% GccaWGZbWaaSaaaeaacaaIXaaabaGaaGymaiabgUcaRiaadEfacaGG
-% OaGaam4CaiaacMcaaaWaaSaaaeaacaWGbbaabaGaam4CaaaacqGH9a
-% qpdaWfqaqaaiGacYgacaGGPbGaaiyBaaWcbaGaam4CaiabgkziUkaa
-% icdaaeqaaOWaaSaaaeaacaaIXaaabaGaaGymaiabgUcaRmaalaaaba
-% Gaam4vamaaCaaaleqabaGaaiOkaaaakiaacIcacaWGZbGaaiykaaqa
-% aiaadohaaaaaaiaadgeacqGH9aqpdaWfqaqaaiGacYgacaGGPbGaai
-% yBaaWcbaGaamiEaiabgkziUkaaicdaaeqaaOWaaSaaaeaacaWGZbaa
-% baGaam4CaiabgUcaRiaadUgaaaGaamyqaiabg2da9iaaicdaaaa!688D!
-\[{e_y}(t) = \mathop {\lim }\limits_{s \to 0} s\frac{1}{{1 + W(s)}}\frac{A}{s} = \mathop {\lim }\limits_{s \to 0} \frac{1}{{1 + \frac{{{W^*}(s)}}{s}}}A = \mathop {\lim }\limits_{x \to 0} \frac{s}{{s + k}}A = 0\]
 
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.7\linewidth]{7}
-	\caption{Графика ошибки е(t)}
-	\label{fig:7}
-\end{figure}
-
-\subsection{Исследование режима движения с постоянной скоростью при g(t)=2t}
-Рассчитаем предельное значение установившейся ошибки
-% MathType!MTEF!2!1!+-
-% feaagGart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
-% hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
-% 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq-Jc9
-% vqaqpepm0xbba9pwe9Q8fs0-yqaqpepae9pg0FirpepeKkFr0xfr-x
-% fr-xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGcbaGaeqyTduMaey
-% ypa0ZaaCbeaeaaciGGSbGaaiyAaiaac2gaaSqaaiaadohacqGHsgIR
-% caaIWaaabeaakiaadohadaWcaaqaaiaaigdaaeaacaaIXaGaey4kaS
-% Iaam4vaiaacIcacaWGZbGaaiykaaaadaWcaaqaaiaadAfaaeaacaWG
-% ZbWaaWbaaSqabeaacaaIYaaaaaaakiabg2da9maaxababaGaciiBai
-% aacMgacaGGTbaaleaacaWGZbGaeyOKH4QaaGimaaqabaGcdaWcaaqa
-% aiaadohaaeaacaWGZbGaey4kaSIaam4AaaaadaWcaaqaaiaadAfaae
-% aacaWGZbaaaiabg2da9maalaaabaGaamOvaaqaaiaadUgaaaaaaa!5905!
-\[\varepsilon  = \mathop {\lim }\limits_{s \to 0} s\frac{1}{{1 + W(s)}}\frac{V}{{{s^2}}} = \mathop {\lim }\limits_{s \to 0} \frac{s}{{s + k}}\frac{V}{s} = \frac{V}{k}\]
-
-
-\begin{center}
+\begin{equation}
+{e_y}(t) = \mathop {\lim }\limits_{s \to 0} s\frac{1}{{1 + W(s)}}\frac{A}{s} = \mathop {\lim }\limits_{s \to 0} \frac{1}{{1 + \frac{{{W^*}(s)}}{s}}}A = \mathop {\lim }\limits_{x \to 0} \frac{s}{{s + k}}A = 0
+\end{equation}
 
 	\begin{figure}[h]
 		\centering
-			\includegraphics[width=0.7\linewidth]{6}
+		\includegraphics[width=0.7\linewidth]{7}
+		\caption{Графика ошибки е(t)}
+		\label{fig:7}
+	\end{figure}
+
+\subsection{Исследование режима движения с постоянной скоростью при g(t)=2t}\hfill\par
+Рассчитаем предельное значение установившейся ошибки
+\begin{equation}
+\varepsilon  = \mathop {\lim }\limits_{s \to 0} s\frac{1}{{1 + W(s)}}\frac{V}{{{s^2}}} = \mathop {\lim }\limits_{s \to 0} \frac{s}{{s + k}}\frac{V}{s} = \frac{V}{k}
+\end{equation}
+
+
+
+\begin{center}
+	\includegraphics[width=0.7\linewidth]{6}
+	\begin{figure}[h]
+		\centering
+		
 		\caption{Графика ошибки е(t)}
 		\label{fig:6}
 	\end{figure}
@@ -240,24 +176,12 @@ $\varepsilon  = \frac{1}{{1 + H\left( s \right)W\left( s \right)}}G\left( s \rig
 таким образом, найдём ощибки для различных значений $k$:
 $\varepsilon=2 (k=1), \varepsilon=0.4 (k=5), \varepsilon=0.2 (k=10)$
 
-\subsection{Исследование режима движения с постоянным ускорением g(t)=at}
+\subsection{Исследование режима движения с постоянным ускорением g(t)=at}\hfill\par
 
 Рассчитаем предельное значение установившейся ошибки
-% MathType!MTEF!2!1!+-
-% feaagGart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
-% hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
-% 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq-Jc9
-% vqaqpepm0xbba9pwe9Q8fs0-yqaqpepae9pg0FirpepeKkFr0xfr-x
-% fr-xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGcbaGaeqyTduMaey
-% ypa0ZaaCbeaeaaciGGSbGaaiyAaiaac2gaaSqaaiaadohacqGHsgIR
-% caaIWaaabeaakiaadohadaWcaaqaaiaaigdaaeaacaaIXaGaey4kaS
-% Iaam4vaiaacIcacaWGZbGaaiykaaaadaWcaaqaaiaadggaaeaacaWG
-% ZbWaaWbaaSqabeaacaaIZaaaaaaakiabg2da9maaxababaGaciiBai
-% aacMgacaGGTbaaleaacaWGZbGaeyOKH4QaaGimaaqabaGcdaWcaaqa
-% aiaadohaaeaacaWGZbGaey4kaSIaam4AaaaadaWcaaqaaiaadggaae
-% aacaWGZbWaaWbaaSqabeaacaaIYaaaaaaakiabg2da9iabg6HiLcaa
-% !59A5!
-\[\varepsilon  = \mathop {\lim }\limits_{s \to 0} s\frac{1}{{1 + W(s)}}\frac{a}{{{s^3}}} = \mathop {\lim }\limits_{s \to 0} \frac{s}{{s + k}}\frac{a}{{{s^2}}} = \infty \]
+\begin{equation}
+\varepsilon  = \mathop {\lim }\limits_{s \to 0} s\frac{1}{{1 + W(s)}}\frac{a}{{{s^3}}} = \mathop {\lim }\limits_{s \to 0} \frac{s}{{s + k}}\frac{a}{{{s^2}}} = \infty
+\end{equation}
 
 \begin{center}
 	\begin{figure}[h]
@@ -267,63 +191,47 @@ $\varepsilon=2 (k=1), \varepsilon=0.4 (k=5), \varepsilon=0.2 (k=10)$
 		\label{fig:8}
 	\end{figure}
 \end{center}
-
-\section{Исследование влияния внешних возмущений}
-
+\hfill\\*
+\newpage
+\section{Исследование влияния внешних возмущений}\hfill\par
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{9}
 	\caption{Схема моделирования}
 	\label{fig:9}
 \end{figure}
-
 Рассчитаем предельное значение установившейся ошибки:
-% MathType!MTEF!2!1!+-
-% feaagGart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
-% hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
-% 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq-Jc9
-% vqaqpepm0xbba9pwe9Q8fs0-yqaqpepae9pg0FirpepeKkFr0xfr-x
-% fr-xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGcbaGaeqyTduMaey
-% ypa0ZaaCbeaeaaciGGSbGaaiyAaiaac2gaaSqaaiaadohacqGHsgIR
-% caaIWaaabeaakiaacUfacqGHsislcaWGZbWaaSaaaeaacaWGZbGaam
-% 4vaiaacIcacaWGZbGaaiykaaqaaiaadohacqGHRaWkcaWGxbGaaiik
-% aiaadohacaGGPaaaamaalaaabaGaamOramaaBaaaleaacaaIXaaabe
-% aaaOqaaiaadohaaaGaey4kaSIaam4CamaalaaabaGaam4vaiaacIca
-% caWGZbGaaiykaaqaaiaadohacqGHRaWkcaWGxbGaaiikaiaadohaca
-% GGPaaaamaalaaabaGaamOramaaBaaaleaacaaIYaaabeaaaOqaaiaa
-% dohaaaGaaiyxaiabg2da9iaacAeadaWgaaWcbaGaaGOmaaqabaaaaa!5E94!
-\[\varepsilon  = \mathop {\lim }\limits_{s \to 0} [ - s\frac{{sW(s)}}{{s + W(s)}}\frac{{{F_1}}}{s} + s\frac{{W(s)}}{{s + W(s)}}\frac{{{F_2}}}{s}] = {F_2}\]
-
+\begin{equation}
+\varepsilon  = \mathop {\lim }\limits_{s \to 0} [ - s\frac{{sW(s)}}{{s + W(s)}}\frac{{{F_1}}}{s} + s\frac{{W(s)}}{{s + W(s)}}\frac{{{F_2}}}{s}] = {F_2}
+\end{equation}
 \begin{center}
-	\includegraphics[width=0.7\linewidth]{10}
-	\begin{figure}[h]
+	\begin{figure}[H]
 		\centering
-		
+			\includegraphics[width=0.7\linewidth]{10}
 		\caption{Графика переходных процессов}
 		\label{fig:10}
 	\end{figure}
 \end{center}
-
+\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{13}
 	\caption{Графика ошибки е(t)}
 	\label{fig:13}
 \end{figure}
-
-\section{Исследование установившейся ошибки при произвольном входном воздействии}
-
+\hfill\\*
+\newpage
+\section{Исследование установившейся ошибки при произвольном входном воздействии}\hfill\par
 \begin{center}
-		\includegraphics[width=0.7\linewidth]{14}
-	\begin{figure}
+	\begin{figure}[h]
 		\centering
-	
+	\includegraphics[width=0.7\linewidth]{14}
 		\caption{Схема моделирования}
 		\label{fig:14}
 	\end{figure}
 \end{center}
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{15}
 	\caption{Графика переходного процесса}
@@ -331,20 +239,10 @@ $\varepsilon=2 (k=1), \varepsilon=0.4 (k=5), \varepsilon=0.2 (k=10)$
 \end{figure}
 
 Оценим приближенно установившуюся ошибку слежения:
-% MathType!MTEF!2!1!+-
-% feaagGart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
-% hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
-% 4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq-Jc9
-% vqaqpepm0xbba9pwe9Q8fs0-yqaqpepae9pg0FirpepeKkFr0xfr-x
-% fr-xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGcbaGaaiikaiaado
-% hacaGGPaGaeyypa0ZaaSaaaeaacaaIXaaabaGaaGymaiabgUcaRiaa
-% dIeacaGGOaGaam4CaiaacMcacaWGxbGaaiikaiaadohacaGGPaaaai
-% abg2da9maalaaabaGaaGimaiaac6cacaaI1aGaam4CamaaCaaaleqa
-% baGaaGOmaaaakiabgUcaRiaadohacqGHRaWkcaaIXaaabaGaaGimai
-% aac6cacaaI1aGaam4CamaaCaaaleqabaGaaGOmaaaakiabgUcaRiaa
-% dohacqGHRaWkcaaIYaaaaaaa!5230!
-\[\varPhi(s) = \frac{1}{{1 + H(s)W(s)}} = \frac{{0.5{s^2} + s + 1}}{{0.5{s^2} + s + 2}}\]
 
+\begin{equation}
+\varPhi(s) = \frac{1}{{1 + H(s)W(s)}} = \frac{{0.5{s^2} + s + 1}}{{0.5{s^2} + s + 2}}
+\end{equation}
 Разложим $\varPhi(s)$ в ряд Тейлора в окрестности точки s=0:
 % MathType!MTEF!2!1!+-
 % feaagGart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
@@ -417,7 +315,7 @@ $\varepsilon=2 (k=1), \varepsilon=0.4 (k=5), \varepsilon=0.2 (k=10)$
 % iIdacaWG0bGaey4kaSIaaGimaiaac6cacaaIWaGaaG4naiaaiwdaaa
 % a!74FB!
 \[{e_y}(t) = 0.5(0.3t + 2\sin 0.8t) + 0.25(0.3 + 1.6\cos 0.8t) - 0 = 0.15t + \sin 0.8t + 0.4\cos 0.8t + 0.075\]
-
+\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{16}
@@ -426,15 +324,16 @@ $\varepsilon=2 (k=1), \varepsilon=0.4 (k=5), \varepsilon=0.2 (k=10)$
 \end{figure}
 
 \begin{center}
-	\includegraphics[width=0.7\linewidth]{17}
 	\begin{figure}[ht]
 		\centering
-		
+			\includegraphics[width=0.7\linewidth]{17}
 		\caption{Графика экспериментальной и аналитически вычисленной ощибок е(t)}
 		\label{fig:17}
 	\end{figure}
 \end{center}
-
-\section*{Выводы}
-В ходе лабораторной работы были исследованы системы с разными порядками астатизма и различными входными и возмущающими воздействиями. В частности, системы с астатизмом первого порядка нечувствительны к постоянным возмущениям.
+\newpage
+\section*{Выводы}\hfill\par
+В ходе лабораторной работы были исследованы системы с разными порядками астатизма и различными входными и возмущающими воздействиями. В частности, системы с астатизмом первого порядка нечувствительны к постоянным возмущениям.При исследовании стационарного режима работы, убедились в том, что при g = A, и увеличении коэффициента усиления k ошибка стремиться к нулю. 
+Убедились в том, что при увеличении прядка астатизма, ошибка, при статическом вохдном возвдействии ошибка равна нулю.
+Внешние возмущения могут оказвать довольно сильное влияние - изменение выходного сигнала в 2 раза, сильное перерегулироване.
 \end{document}
