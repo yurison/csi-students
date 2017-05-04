@@ -21,7 +21,15 @@
 \captionsetup[figure]{labelformat=simple, labelsep = endash}
 
 \usepackage{indentfirst}
-
+\usepackage{setspace}
+% одинарный интервал
+\singlespacing
+% полуторный интервал
+\onehalfspacing
+% двойной интервал
+\doublespacing
+% произвольный интервал
+\setstretch{1}
 
 \begin{document}
 	\parindent=1.27cm
@@ -61,6 +69,7 @@
 
 
 \paragraph{Цель работы: }Ознакомление с экспериментальными методами построения областей устойчивости линейных динамических систем и изучение влияния на устойчивость системы ее параметров.
+
 \paragraph{Исходные данные.} Необходимо исследовать систему при $g = 0$, $y(0) = 1$ и $T_1 = 3$. Сама система представлена на следующем рисунке.
 
 
@@ -71,7 +80,11 @@
 	\centering Рисунок 1 - Схема моделирования
 	
 \end{figure}
-\section{Устойчивость системы}\hfill\par
+\clearpage
+\begin{center}
+	\section*{Устойчивость системы}\hfill\par
+\end{center}
+
 
 \begin{figure}[h]
 
@@ -104,11 +117,14 @@
 \end{center}
 
 \newpage
-\section{Анализ устойчивости системы}
-\subsection{Построим экспериментальную границу устойчивости}
+\begin{center}
+\section*{Анализ устойчивости системы}
+\end{center}
+\subsection*{Построим экспериментальную границу устойчивости}
+
 \begin{table} [h!]
 	\centering
-	\caption{Экспериментальные данные.}
+	\caption{ Экспериментальные данные.}
 	\tabulinesep = 2mm
 	\begin{tabu} spread 1em{|c|c|c|c|c|c|c|c|c|c|c|c|}
 		\hline
@@ -117,8 +133,10 @@
 		\hline
 	\end{tabu}
 \end{table}
+	
 
-\subsection{Теоретический расчет границы устойчивости с использованием критерия Гурвица}
+
+\subsection*{Теоретический расчет границы устойчивости с использованием критерия Гурвица}
 
 
     Передаточная функция 
@@ -158,7 +176,9 @@ k =\frac{3 + T_2}{3T_2}
 \end{center}
 
 \newpage
-\section*{Выводы}
+
+	\section*{\centering Выводы}
+
 При проектировании систем большое значение имеет определение областей устойчивости в плоскости реальных параметров, присущих системе. Аналитическую оценку позволил получить критерий Гурциа. Соотвественно по составленной матрице (2) мы смогли получить и составить условия границы устойчивоси (3) и (4). Система является устойчивой ,соответственно, множество значений параметров находится ниже границы устойчивости (при % MathType!MTEF!2!1!+-
 % feaagGart1ev2aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
 % hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr

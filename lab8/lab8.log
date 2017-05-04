@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.28)  27 APR 2017 13:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.28)  4 MAY 2017 13:46
 entering extended mode
 **./lab8.tex
 (lab8.tex
@@ -785,23 +785,27 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
-) (lab8.aux)
+)
+(C:\Users\Sion\AppData\Roaming\MiKTeX\2.9\tex\latex\setspace\setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(lab8.aux)
 \openout1 = `lab8.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -895,15 +899,15 @@ G,.JBIG2,.JB2,.eps]
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 35.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 43.
 
 
 LaTeX Font Warning: Font shape `T2A/cmr/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 38.
+(Font)              size <20.74> substituted on input line 46.
 
 
 LaTeX Font Warning: Font shape `T2A/cmr/bx/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 38.
+(Font)              size <20.74> substituted on input line 46.
 
 [1
 
@@ -911,54 +915,56 @@ LaTeX Font Warning: Font shape `T2A/cmr/bx/n' in size <20> not available
 <0.png, id=11, 402.00188pt x 86.57344pt>
 File: 0.png Graphic file (type png)
  <use 0.png>
-Package pdftex.def Info: 0.png used on input line 69.
+Package pdftex.def Info: 0.png used on input line 78.
 (pdftex.def)             Requested size: 338.58632pt x 72.91536pt.
-
-<1.png, id=13, 511.9125pt x 297.36093pt>
+ [1 <./0.png>]
+<1.png, id=21, 511.9125pt x 296.60812pt>
 File: 1.png Graphic file (type png)
  <use 1.png>
-Package pdftex.def Info: 1.png used on input line 78.
-(pdftex.def)             Requested size: 338.58632pt x 196.67625pt.
+Package pdftex.def Info: 1.png used on input line 91.
+(pdftex.def)             Requested size: 338.58632pt x 196.17833pt.
 
-<2.png, id=14, 511.9125pt x 297.36093pt>
+<2.png, id=22, 511.9125pt x 296.60812pt>
 File: 2.png Graphic file (type png)
  <use 2.png>
-Package pdftex.def Info: 2.png used on input line 85.
-(pdftex.def)             Requested size: 338.58632pt x 196.67625pt.
+Package pdftex.def Info: 2.png used on input line 98.
+(pdftex.def)             Requested size: 338.58632pt x 196.17833pt.
 
-<3.png, id=15, 511.9125pt x 297.36093pt>
+<3.png, id=23, 511.9125pt x 296.60812pt>
 File: 3.png Graphic file (type png)
  <use 3.png>
-Package pdftex.def Info: 3.png used on input line 91.
-(pdftex.def)             Requested size: 338.58632pt x 196.67625pt.
- [1 <./0.png> <./1.png (PNG copy)> <./2.png (PNG copy)>] <5.png, id=25, 511.912
-5pt x 297.36093pt>
-File: 5.png Graphic file (type png)
+Package pdftex.def Info: 3.png used on input line 104.
+(pdftex.def)             Requested size: 338.58632pt x 196.17833pt.
 
-<use 5.png>
-Package pdftex.def Info: 5.png used on input line 99.
-(pdftex.def)             Requested size: 338.58632pt x 196.67625pt.
- [2 <./3.png (PNG copy)> <./5.png (PNG copy)>]
-<4.png, id=29, 443.40656pt x 279.29344pt>
+<5.png, id=24, 511.9125pt x 296.60812pt>
+File: 5.png Graphic file (type png)
+ <use 5.png>
+Package pdftex.def Info: 5.png used on input line 112.
+(pdftex.def)             Requested size: 338.58632pt x 196.17833pt.
+ [2
+
+ <./1.png (PNG copy)> <./2.png (PNG copy)> <./3.png (PNG copy)>] [3 <./5.png (P
+NG copy)>]
+<4.png, id=32, 443.40656pt x 279.29344pt>
 File: 4.png Graphic file (type png)
  <use 4.png>
-Package pdftex.def Info: 4.png used on input line 153.
+Package pdftex.def Info: 4.png used on input line 171.
 (pdftex.def)             Requested size: 338.58632pt x 213.28375pt.
- [3 <./4.png (PNG copy)>]
-[4] (lab8.aux)
+ [4 <./4.png (PNG copy)>]
+[5] (lab8.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 6125 strings out of 493333
- 84008 string characters out of 3139197
- 165979 words of memory out of 3000000
- 9540 multiletter control sequences out of 15000+200000
+ 6155 strings out of 493333
+ 84582 string characters out of 3139197
+ 166272 words of memory out of 3000000
+ 9566 multiletter control sequences out of 15000+200000
  17564 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,40p,1010b,469s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,11n,40p,812b,469s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\lab
 x1440.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi
 600\labx1095.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-
@@ -974,9 +980,9 @@ pe1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on lab8.pdf (5 pages, 186519 bytes).
+Output written on lab8.pdf (6 pages, 180396 bytes).
 PDF statistics:
- 316 PDF objects out of 1000 (max. 8388607)
+ 314 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
