@@ -17,7 +17,7 @@
 \newcommand\tline[2]{$\underset{\text{#1}}{\text{\underline{\hspace{#2}}}}$}
 %Change label separator
 \usepackage{caption}
-\captionsetup[table]{labelformat=simple, labelsep = endash}
+\captionsetup[table]{name = Таблица, labelsep = endash}
 \captionsetup[figure]{labelformat=simple, labelsep = endash}
 
 \usepackage{indentfirst}
@@ -121,20 +121,20 @@
 \section*{Анализ устойчивости системы}
 \end{center}
 \subsection*{Построим экспериментальную границу устойчивости}
-
-\begin{table} [h!]
-	\centering
-	\caption{ Экспериментальные данные.}
-	\tabulinesep = 2mm
-	\begin{tabu} spread 1em{|c|c|c|c|c|c|c|c|c|c|c|c|}
-		\hline
-		$T_2$ & 0.1 & 0.5 & 1 & 1.5 & 2 & 2.5 & 3 & 3.5 & 4 & 4.5 & 5 \\  \hline
-		$k$ & 10.3 & 2.3 & 1.3 & 1 & 0.83 & 0.73 & 0.67 & 0.62 & 0.58 & 0.55 & 0.53  \rule{0pt}{5pt} \\ 
-		\hline
-	\end{tabu}
-\end{table}
 	
-
+	\begin{table} [h]	
+	\begin{flushleft}
+	Таблица 1- Экспериментальные данные
+\end{flushleft}
+\\
+		\tabulinesep = 2mm
+		\begin{tabu} spread 1em{|c|c|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			$T_2$ & 0.1 & 0.5 & 1 & 1.5 & 2 & 2.5 & 3 & 3.5 & 4 & 4.5 & 5 \\  \hline
+			$k$ & 10.3 & 2.3 & 1.3 & 1 & 0.83 & 0.73 & 0.67 & 0.62 & 0.58 & 0.55 & 0.53  \rule{0pt}{5pt} \\ 
+			\hline
+		\end{tabu}
+	\end{table}
 
 \subsection*{Теоретический расчет границы устойчивости с использованием критерия Гурвица}
 

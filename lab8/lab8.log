@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.28)  4 MAY 2017 13:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.28)  4 MAY 2017 14:28
 entering extended mode
 **./lab8.tex
 (lab8.tex
@@ -945,6 +945,19 @@ Package pdftex.def Info: 5.png used on input line 112.
 
  <./1.png (PNG copy)> <./2.png (PNG copy)> <./3.png (PNG copy)>] [3 <./5.png (P
 NG copy)>]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.130 		\tabulinesep
+                     = 2mm
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 <4.png, id=32, 443.40656pt x 279.29344pt>
 File: 4.png Graphic file (type png)
  <use 4.png>
@@ -958,13 +971,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 6155 strings out of 493333
- 84582 string characters out of 3139197
- 166272 words of memory out of 3000000
- 9566 multiletter control sequences out of 15000+200000
+ 6154 strings out of 493333
+ 84564 string characters out of 3139197
+ 166275 words of memory out of 3000000
+ 9565 multiletter control sequences out of 15000+200000
  17564 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,40p,812b,469s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,11n,40p,812b,466s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\lab
 x1440.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi
 600\labx1095.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-
@@ -980,9 +993,9 @@ pe1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on lab8.pdf (6 pages, 180396 bytes).
+Output written on lab8.pdf (6 pages, 180129 bytes).
 PDF statistics:
- 314 PDF objects out of 1000 (max. 8388607)
+ 313 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
