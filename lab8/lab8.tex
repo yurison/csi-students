@@ -17,7 +17,7 @@
 \newcommand\tline[2]{$\underset{\text{#1}}{\text{\underline{\hspace{#2}}}}$}
 %Change label separator
 \usepackage{caption}
-\captionsetup[table]{name = Таблица, labelsep = endash}
+\captionsetup[table]{labelformat=simple, labelsep = endash, justification = raggedright, singlelinecheck = off, width = 0.75\textwidth}
 \captionsetup[figure]{labelformat=simple, labelsep = endash}
 
 \usepackage{indentfirst}
@@ -123,10 +123,7 @@
 \subsection{Построим экспериментальную границу устойчивости}
 	
 	\begin{table} [h]	
-	\begin{flushleft}
-	Таблица 1- Экспериментальные данные
-\end{flushleft}
-
+\caption{Экспериментальные данные}
 		\centering
 		\tabulinesep = 2mm
 		\begin{tabu} spread 1em{|c|c|c|c|c|c|c|c|c|c|c|c|}
