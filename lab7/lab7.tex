@@ -1,4 +1,4 @@
-\documentclass[a4paper, 11pt]{article}
+\documentclass[a4paper, 10pt]{article}
 
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -18,7 +18,7 @@
 %Change label separator
 \usepackage{caption}
 \captionsetup[figure]{name = Рисунок, labelsep = endash}
-\captionsetup[table]{name = Таблица, labelsep = endash}
+\captionsetup[table]{labelformat=simple, labelsep = endash, justification = raggedright, singlelinecheck = off, width = 0.9\textwidth}
 
 \usepackage{indentfirst}
 \usepackage{setspace}
@@ -80,7 +80,7 @@
 \end{table}
 \clearpage
 \begin{center}
-\section*{Исследование системы с астатизмом нулевого порядка}\hfill\par
+\section{Исследование системы с астатизмом нулевого порядка}\hfill\par
 \end{center}
 Задана замкнутая система с регулятором $H(s)=k$ и передаточной функцией разомкнутого контура 
 \begin{equation}
@@ -94,7 +94,7 @@ W(s) = \frac{1}{{0.5{s^2} + s + 1}}
 	\label{fig:12}
 \end{figure}
 
-\subsection*{Исследование стационарного режима работы при g(t)=2}\hfill\par
+\subsection{Исследование стационарного режима работы при g(t)=2}\hfill\par
 Рассчитаем предельное значение установившейся ошибки
 
 \begin{equation}
@@ -120,7 +120,7 @@ $\varepsilon=1 (k=1), \varepsilon=0.33 (k=5), \varepsilon=0.18 (k=10)$
 	\label{fig:2}
 \end{figure}
 
-\subsection*{Исследование режима движения с постоянной скоростью при g(t)=2t}\hfill\par
+\subsection{Исследование режима движения с постоянной скоростью при g(t)=2t}\hfill\par
 Рассчитаем предельное значение установившейся ошибки\\
 \begin{equation}
 \varepsilon  = \frac{1}{{1 + H\left( s \right)W\left( s \right)}}G\left( s \right) = \mathop {\lim }\limits_{s \to 0} s\frac{1}{{1 + \frac{k}{{0.5{s^2} + s + 1}}}}\frac{2}{{{s^2}}} = \mathop {\lim }\limits_{s \to 0} \frac{{0.5{s^2} + s + 1}}{{0.5{s^2} + s + 1 + k}}\frac{2}{s} = \infty 
@@ -143,7 +143,7 @@ $\varepsilon=1 (k=1), \varepsilon=0.33 (k=5), \varepsilon=0.18 (k=10)$
 \end{figure}
 \clearpage
 \begin{center}
-\section*{Исследование системы с астатизмом первого порядка.}\hfill\par
+\section{Исследование системы с астатизмом первого порядка.}\hfill\par
 \end{center}		
 	\begin{figure}[h]
 	\center\includegraphics[width=0.6\linewidth]{5}
@@ -151,7 +151,7 @@ $\varepsilon=1 (k=1), \varepsilon=0.33 (k=5), \varepsilon=0.18 (k=10)$
 		\label{fig:5}
 	\end{figure}
 
-\subsection*{Исследование стационарного режима работы при g(t)=2}\hfill\par
+\subsection{Исследование стационарного режима работы при g(t)=2}\hfill\par
 Рассчитаем предельное значение установившейся ошибки
 
 \begin{equation}
@@ -165,7 +165,7 @@ $\varepsilon=1 (k=1), \varepsilon=0.33 (k=5), \varepsilon=0.18 (k=10)$
 		\label{fig:7}
 	\end{figure}
 
-\subsection*{Исследование режима движения с постоянной скоростью при g(t)=2t}\hfill\par
+\subsection{Исследование режима движения с постоянной скоростью при g(t)=2t}\hfill\par
 Рассчитаем предельное значение установившейся ошибки
 \begin{equation}
 \varepsilon  = \mathop {\lim }\limits_{s \to 0} s\frac{1}{{1 + W(s)}}\frac{V}{{{s^2}}} = \mathop {\lim }\limits_{s \to 0} \frac{s}{{s + k}}\frac{V}{s} = \frac{V}{k}
@@ -186,7 +186,7 @@ $\varepsilon=1 (k=1), \varepsilon=0.33 (k=5), \varepsilon=0.18 (k=10)$
 таким образом, найдём ощибки для различных значений $k$:
 $\varepsilon=2 (k=1), \varepsilon=0.4 (k=5), \varepsilon=0.2 (k=10)$
 
-\subsection*{Исследование режима движения с постоянным ускорением g(t)=at}\hfill\par
+\subsection{Исследование режима движения с постоянным ускорением g(t)=at}\hfill\par
 
 Рассчитаем предельное значение установившейся ошибки
 \begin{equation}
@@ -203,7 +203,7 @@ $\varepsilon=2 (k=1), \varepsilon=0.4 (k=5), \varepsilon=0.2 (k=10)$
 \end{center}
 \clearpage
 \begin{center}
-	\section*{Исследование влияния внешних возмущений}\hfill\par
+	\section{Исследование влияния внешних возмущений}\hfill\par
 \end{center}
 \begin{figure}[h]
 	\centering
@@ -232,7 +232,7 @@ $\varepsilon=2 (k=1), \varepsilon=0.4 (k=5), \varepsilon=0.2 (k=10)$
 \end{figure}
 \clearpage
 \begin{center}
-\section*{Исследование установившейся ошибки при произвольном входном воздействии}\hfill\par
+\section{Исследование установившейся ошибки при произвольном входном воздействии}\hfill\par
 \end{center}
 \begin{center}
 	\begin{figure}[h]
@@ -348,7 +348,7 @@ $\varepsilon=2 (k=1), \varepsilon=0.4 (k=5), \varepsilon=0.2 (k=10)$
 	\section*{Выводы}
 \end{center}
 
-В ходе лабораторной работы были исследованы системы с разными порядками астатизма и различными входными и возмущающими воздействиями. В частности, системы с астатизмом первого порядка нечувствительны к постоянным возмущениям.При исследовании стационарного режима работы, убедились в том, что при g = A, и увеличении коэффициента усиления k ошибка стремиться к нулю. 
-Убедились в том, что при увеличении прядка астатизма, ошибка, при статическом вохдном возвдействии ошибка равна нулю.
+В данной работе мы исследовали системы с разными порядками астатизма и различными входными и возмущающими воздействиями. В частности, системы с астатизмом первого порядка нечувствительны к постоянным возмущениям.При исследовании стационарного режима работы, убедились в том, что при g = A, и увеличении коэффициента усиления k ошибка стремиться к нулю. 
+Убедились в том, что при увеличении прядка астатизма, ошибка, при статическом входном возвдействии ошибка равна нулю.
 Внешние возмущения могут оказвать довольно сильное влияние - изменение выходного сигнала в 2 раза, сильное перерегулироване.
 \end{document}
