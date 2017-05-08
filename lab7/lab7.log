@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.28)  8 MAY 2017 19:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.28)  8 MAY 2017 19:42
 entering extended mode
 **./lab7.tex
 (lab7.tex
@@ -6,8 +6,8 @@ LaTeX2e <2017/01/01> patch level 1
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -826,12 +826,12 @@ LaTeX Font Info:    ... okay on input line 34.
 * \topmargin=-52.36449pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=57.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -911,120 +911,134 @@ LaTeX Font Warning: Font shape `T2A/cmr/bx/n' in size <20> not available
 
 [1
 
-{C:/Users/Sion/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [1]
-<12.png, id=17, 389.95688pt x 116.68594pt>
+{C:/Users/Sion/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (10.8544pt too wide) in paragraph at lines 74--80
+ [][] 
+ []
+
+[1] <12.png, id=17, 389.95688pt x 116.68594pt>
 File: 12.png Graphic file (type png)
  <use 12.png>
 Package pdftex.def Info: 12.png used on input line 92.
 (pdftex.def)             Requested size: 338.58632pt x 101.3183pt.
 
-<1.png, id=18, 511.9125pt x 297.36093pt>
+<1.png, id=18, 511.9125pt x 296.60812pt>
 File: 1.png Graphic file (type png)
  <use 1.png>
 Package pdftex.def Info: 1.png used on input line 108.
-(pdftex.def)             Requested size: 338.58632pt x 196.67625pt.
+(pdftex.def)             Requested size: 338.58632pt x 196.17833pt.
 
-<2.png, id=19, 511.9125pt x 297.36093pt>
+<2.png, id=19, 511.9125pt x 296.60812pt>
 File: 2.png Graphic file (type png)
  <use 2.png>
 Package pdftex.def Info: 2.png used on input line 118.
-(pdftex.def)             Requested size: 338.58632pt x 196.67625pt.
+(pdftex.def)             Requested size: 338.58632pt x 196.17833pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[2
 
+ <./12.png> <./1.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
-<33.png, id=20, 443.40656pt x 264.99pt>
+<33.png, id=28, 511.9125pt x 296.60812pt>
 File: 33.png Graphic file (type png)
  <use 33.png>
 Package pdftex.def Info: 33.png used on input line 132.
-(pdftex.def)             Requested size: 338.58632pt x 202.36086pt.
+(pdftex.def)             Requested size: 338.58632pt x 196.17833pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<44.png, id=21, 443.40656pt x 264.99pt>
+<44.png, id=29, 511.9125pt x 296.60812pt>
 File: 44.png Graphic file (type png)
  <use 44.png>
 Package pdftex.def Info: 44.png used on input line 140.
-(pdftex.def)             Requested size: 338.58632pt x 202.36086pt.
- [2
-
- <./12.png> <./1.png (PNG copy)>] [3 <./2.png (PNG copy)> <./33.png (PNG copy)>
- <./44.png (PNG copy)>]
-<5.png, id=33, 362.10281pt x 124.96687pt>
+(pdftex.def)             Requested size: 338.58632pt x 196.17833pt.
+ [3 <./2.png (PNG copy)> <./33.png (PNG copy)>] [4 <./44.png (PNG copy)>]
+<5.png, id=37, 362.10281pt x 124.96687pt>
 File: 5.png Graphic file (type png)
  <use 5.png>
 Package pdftex.def Info: 5.png used on input line 149.
 (pdftex.def)             Requested size: 290.22107pt x 100.16049pt.
 
-<7.png, id=34, 443.40656pt x 264.99pt>
+<7.png, id=38, 443.40656pt x 264.99pt>
 File: 7.png Graphic file (type png)
  <use 7.png>
 Package pdftex.def Info: 7.png used on input line 163.
-(pdftex.def)             Requested size: 338.58632pt x 202.36086pt.
+(pdftex.def)             Requested size: 459.51054pt x 274.63289pt.
+ [5
 
-<6.png, id=35, 511.9125pt x 297.36093pt>
+ <./5.png> <./7.png (PNG copy)>] <6.png, id=43, 511.9125pt x 297.36093pt>
 File: 6.png Graphic file (type png)
  <use 6.png>
 Package pdftex.def Info: 6.png used on input line 177.
-(pdftex.def)             Requested size: 338.58632pt x 196.67625pt.
- [4
+(pdftex.def)             Requested size: 459.51054pt x 266.9236pt.
 
- <./5.png> <./7.png (PNG copy)>] <8.png, id=40, 443.40656pt x 264.99pt>
+Overfull \hbox (30.30081pt too wide) in paragraph at lines 189--189
+[]\T2A/cmr/bx/n/14.4 Исследование ре-жи-ма дви-же-ния с по-сто-ян-ным уско-ре-н
+и-ем g(t)=at 
+ []
+
+<8.png, id=44, 443.40656pt x 264.99pt>
 File: 8.png Graphic file (type png)
  <use 8.png>
 Package pdftex.def Info: 8.png used on input line 199.
-(pdftex.def)             Requested size: 338.58632pt x 202.36086pt.
- [5 <./6.png (PNG copy)> <./8.png (PNG copy)>] <9.png, id=44, 456.20438pt x 173
-.89969pt>
-File: 9.png Graphic file (type png)
+(pdftex.def)             Requested size: 459.51054pt x 274.63289pt.
 
-<use 9.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6 <./6.png (PNG copy)>] [7 <./8.png (PNG copy)>]
+<9.png, id=52, 456.20438pt x 173.89969pt>
+File: 9.png Graphic file (type png)
+ <use 9.png>
 Package pdftex.def Info: 9.png used on input line 210.
-(pdftex.def)             Requested size: 338.58632pt x 129.0685pt.
- <10.png, id=45, 511.9125pt x 297.36093pt>
+(pdftex.def)             Requested size: 459.51054pt x 175.16495pt.
+
+<10.png, id=53, 511.9125pt x 297.36093pt>
 File: 10.png Graphic file (type png)
  <use 10.png>
 Package pdftex.def Info: 10.png used on input line 221.
-(pdftex.def)             Requested size: 338.58632pt x 196.67625pt.
- [6
+(pdftex.def)             Requested size: 459.51054pt x 266.9236pt.
+ [8
 
- <./9.png> <./10.png (PNG copy)>] <13.png, id=50, 511.9125pt x 297.36093pt>
+ <./9.png> <./10.png (PNG copy)>] <13.png, id=57, 511.9125pt x 297.36093pt>
 File: 13.png Graphic file (type png)
  <use 13.png>
 Package pdftex.def Info: 13.png used on input line 229.
-(pdftex.def)             Requested size: 338.58632pt x 196.67625pt.
-
-[7 <./13.png (PNG copy)>] <14.png, id=54, 430.60875pt x 117.43875pt>
+(pdftex.def)             Requested size: 459.51054pt x 266.9236pt.
+ [9 <./13.png (PNG copy)>] <14.png, id=61, 430.60875pt x 117.43875pt>
 File: 14.png Graphic file (type png)
-
-<use 14.png>
+ <use 14.png>
 Package pdftex.def Info: 14.png used on input line 240.
-(pdftex.def)             Requested size: 338.58632pt x 92.34372pt.
- <15.png, id=55, 443.40656pt x 264.99pt>
+(pdftex.def)             Requested size: 459.51054pt x 125.32489pt.
+
+<15.png, id=62, 443.40656pt x 264.99pt>
 File: 15.png Graphic file (type png)
  <use 15.png>
 Package pdftex.def Info: 15.png used on input line 248.
-(pdftex.def)             Requested size: 338.58632pt x 202.36086pt.
- [8
+(pdftex.def)             Requested size: 459.51054pt x 274.63289pt.
 
- <./14.png> <./15.png (PNG copy)>] <16.png, id=59, 325.215pt x 70.76437pt>
+Overfull \hbox (13.199pt too wide) detected at line 289
+[] \OT1/cmr/m/n/12 = [][](\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 ) = [] = [][] = [] 
+= 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 25
+ []
+
+[10
+
+ <./14.png> <./15.png (PNG copy)>] <16.png, id=66, 325.215pt x 70.76437pt>
 File: 16.png Graphic file (type png)
- <use 16.png>
-Package pdftex.def Info: 16.png used on input line 333.
-(pdftex.def)             Requested size: 338.58632pt x 73.67958pt.
 
-<17.png, id=60, 443.40656pt x 264.99pt>
+<use 16.png>
+Package pdftex.def Info: 16.png used on input line 333.
+(pdftex.def)             Requested size: 459.51054pt x 99.99371pt.
+ <17.png, id=67, 443.40656pt x 264.99pt>
 File: 17.png Graphic file (type png)
  <use 17.png>
 Package pdftex.def Info: 17.png used on input line 341.
-(pdftex.def)             Requested size: 338.58632pt x 202.36086pt.
- [9 <./16.png> <./17.png (PNG copy)>] [10
+(pdftex.def)             Requested size: 459.51054pt x 274.63289pt.
+ [11 <./16.png> <./17.png (PNG copy)>] [12
 
 ] (lab7.aux)
 
@@ -1033,31 +1047,32 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 6200 strings out of 493333
- 84955 string characters out of 3139197
- 168455 words of memory out of 3000000
- 9610 multiletter control sequences out of 15000+200000
- 13330 words of font info for 30 fonts, out of 3000000 for 9000
+ 6221 strings out of 493333
+ 85184 string characters out of 3139197
+ 166484 words of memory out of 3000000
+ 9623 multiletter control sequences out of 15000+200000
+ 17552 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,19n,40p,962b,503s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,19n,40p,963b,503s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\lab
 x1440.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi
-600\labx1000.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\unknow
-n\unknown\dpi600\larm1000.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\lh\lh-t2a\dpi600\labx2074.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fo
-nts\pk\ljfour\lh\lh-t2a\dpi600\larm1440.pk> <C:\Users\Sion\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm0700.pk> <C:\Users\Sion\AppData\Local
-\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1200.pk><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on lab7.pdf (11 pages, 277674 bytes).
+600\labx1728.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-
+t2a\dpi600\larm0800.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\lh\lh-t2a\dpi600\larm1200.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk
+\ljfour\lh\lh-t2a\dpi600\labx2074.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\lh\lh-t2a\dpi600\larm1440.pk> <C:\Users\Sion\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm0700.pk> <C:\Users\Sion\AppData\Loca
+l\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1200.pk><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on lab7.pdf (13 pages, 286690 bytes).
 PDF statistics:
- 375 PDF objects out of 1000 (max. 8388607)
+ 392 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

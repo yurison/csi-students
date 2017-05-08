@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.28)  4 MAY 2017 16:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.28)  8 MAY 2017 19:23
 entering extended mode
 **./lab8.tex
 (lab8.tex
@@ -6,8 +6,8 @@ LaTeX2e <2017/01/01> patch level 1
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
-File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -826,12 +826,12 @@ LaTeX Font Info:    ... okay on input line 34.
 * \topmargin=-52.36449pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=11.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=50.0pt
+* \marginparwidth=35.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -918,25 +918,25 @@ File: 0.png Graphic file (type png)
 Package pdftex.def Info: 0.png used on input line 78.
 (pdftex.def)             Requested size: 338.58632pt x 72.91536pt.
  [1 <./0.png>]
-<1.png, id=21, 511.9125pt x 296.60812pt>
+<1.png, id=20, 511.9125pt x 296.60812pt>
 File: 1.png Graphic file (type png)
  <use 1.png>
 Package pdftex.def Info: 1.png used on input line 91.
 (pdftex.def)             Requested size: 338.58632pt x 196.17833pt.
 
-<2.png, id=22, 511.9125pt x 296.60812pt>
+<2.png, id=21, 511.9125pt x 296.60812pt>
 File: 2.png Graphic file (type png)
  <use 2.png>
 Package pdftex.def Info: 2.png used on input line 98.
 (pdftex.def)             Requested size: 338.58632pt x 196.17833pt.
 
-<3.png, id=23, 511.9125pt x 296.60812pt>
+<3.png, id=22, 511.9125pt x 296.60812pt>
 File: 3.png Graphic file (type png)
  <use 3.png>
 Package pdftex.def Info: 3.png used on input line 104.
 (pdftex.def)             Requested size: 338.58632pt x 196.17833pt.
 
-<5.png, id=24, 511.9125pt x 296.60812pt>
+<5.png, id=23, 511.9125pt x 296.60812pt>
 File: 5.png Graphic file (type png)
  <use 5.png>
 Package pdftex.def Info: 5.png used on input line 112.
@@ -945,7 +945,7 @@ Package pdftex.def Info: 5.png used on input line 112.
 
  <./1.png (PNG copy)> <./2.png (PNG copy)> <./3.png (PNG copy)>] [3 <./5.png (P
 NG copy)>]
-<4.png, id=32, 511.9125pt x 296.60812pt>
+<4.png, id=31, 511.9125pt x 296.60812pt>
 File: 4.png Graphic file (type png)
  <use 4.png>
 Package pdftex.def Info: 4.png used on input line 169.
@@ -959,30 +959,30 @@ LaTeX Font Warning: Size substitutions with differences
  ) 
 Here is how much of TeX's memory you used:
  6155 strings out of 493333
- 84582 string characters out of 3139197
- 166339 words of memory out of 3000000
+ 84570 string characters out of 3139197
+ 166343 words of memory out of 3000000
  9566 multiletter control sequences out of 15000+200000
- 17564 words of font info for 43 fonts, out of 3000000 for 9000
+ 17552 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,11n,40p,1010b,477s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\lab
 x1440.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi
-600\labx1095.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-
+600\labx1728.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-
 t2a\dpi600\larm0800.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
-\lh\lh-t2a\dpi600\larm1095.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk
+\lh\lh-t2a\dpi600\larm1200.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk
 \ljfour\lh\lh-t2a\dpi600\labx2074.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\f
 onts\pk\ljfour\lh\lh-t2a\dpi600\larm1440.pk> <C:\Users\Sion\AppData\Local\MiKTe
 X\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm0700.pk> <C:\Users\Sion\AppData\Loca
 l\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1200.pk><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+c/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on lab8.pdf (6 pages, 179925 bytes).
+Output written on lab8.pdf (6 pages, 185000 bytes).
 PDF statistics:
- 319 PDF objects out of 1000 (max. 8388607)
+ 327 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
