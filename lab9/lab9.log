@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.28)  16 MAY 2017 02:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.28)  16 MAY 2017 02:54
 entering extended mode
 **./lab9.tex
 (lab9.tex
@@ -1369,14 +1369,14 @@ enefit from \pgfplotsset{compat=1.14} (current compat level: 1.13).
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 74.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 75.
 
 LaTeX Font Warning: Font shape `T2A/cmr/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 77.
+(Font)              size <20.74> substituted on input line 78.
 
 
 LaTeX Font Warning: Font shape `T2A/cmr/bx/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 77.
+(Font)              size <20.74> substituted on input line 78.
 
 [1
 
@@ -1384,53 +1384,58 @@ LaTeX Font Warning: Font shape `T2A/cmr/bx/n' in size <20> not available
 PGFPlots: reading {data/data4.txt}
 
 [2]
-Package pgfplots info on input line 166: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 165: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/data4.txt}
-Package pgfplots info on input line 179: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 178: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/data4.txt}
 
 
 Package pgfplots Warning: Axis range for axis y is approximately empty; enlargi
-ng it (it is [-90.000000000:-90.000000000]) on input line 181.
+ng it (it is [-90.000000000:-90.000000000]) on input line 180.
 
  [warning /pgfplots/warning/approx empty range enlarged]
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 159--185
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 158--184
 []$[]$ $[]$ 
  []
 
 PGFPlots: reading {data/data4.txt}
 PGFPlots: reading {data/data4.txt}
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 188--214
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 187--213
 []$[]$ $[]$ 
  []
 
 [3]
 PGFPlots: reading {data/data5.txt}
  [4]
-Package pgfplots info on input line 246: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 245: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/data5.txt}
-Package pgfplots info on input line 259: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 258: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/data5.txt}
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 239--265
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 238--264
 []$[]$ $[]$ 
  []
 
 PGFPlots: reading {data/data5.txt}
 PGFPlots: reading {data/data5.txt}
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 268--294
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 267--293
 []$[]$ $[]$ 
  []
 
 [5]
 PGFPlots: reading {data/data7.txt}
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 313--314
 
@@ -1446,38 +1451,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 315--316
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
-
- []
-
 [6]
-Package pgfplots info on input line 332: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 331: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/data7.txt}
-Package pgfplots info on input line 346: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 345: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/data7.txt}
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 325--353
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 324--352
 []$[]$ $[]$ 
  []
 
 PGFPlots: reading {data/data7.txt}
 PGFPlots: reading {data/data7.txt}
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 356--384
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 355--383
 []$[]$ $[]$ 
  []
 
 [7]
-Package pgfplots info on input line 399: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 398: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/data7.txt}
-Package pgfplots info on input line 414: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 413: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/data4.txt}
-Package pgfplots info on input line 429: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 428: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/data5.txt}
  [8] [9] [10] [11] (lab9.aux)
@@ -1490,13 +1490,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 26940 strings out of 493333
- 665068 string characters out of 3139197
- 856626 words of memory out of 3000000
- 29966 multiletter control sequences out of 15000+200000
+ 26941 strings out of 493333
+ 665077 string characters out of 3139197
+ 856784 words of memory out of 3000000
+ 29967 multiletter control sequences out of 15000+200000
  21075 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,15n,104p,905b,2179s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,15n,104p,872b,2179s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\lar
 m1095.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi
 600\labx1728.pk> <C:\Users\Sion\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-
@@ -1514,9 +1514,9 @@ ts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on lab9.pdf (12 pages, 231541 bytes).
+Output written on lab9.pdf (12 pages, 229274 bytes).
 PDF statistics:
- 370 PDF objects out of 1000 (max. 8388607)
+ 369 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
