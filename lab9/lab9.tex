@@ -1,0 +1,449 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage[T1, T2A]{fontenc}
+\usepackage{graphicx}
+
+\usepackage{pgfplots}
+\usetikzlibrary{pgfplots.polar}
+\pgfplotsset{compat=1.13, grid=major}
+\usepackage[left = 2cm, right = 2cm, bottom = 2cm, top = 2cm]{geometry}
+\usepackage[top=2cm, left=2cm, right=2cm, left=2cm]{geometry}
+\usepackage{amsmath}
+
+\usepackage{tabu}
+\usepackage{threeparttablex} 
+\usepackage{booktabs} 
+\usepackage[tableposition=top]{caption}
+
+\usepackage{subcaption}
+\DeclareCaptionLabelFormat{gostfigure}{Рисунок #2}
+\DeclareCaptionLabelFormat{gosttable}{Таблица #2}
+\DeclareCaptionLabelSeparator{gost}{~---~}
+\captionsetup{labelsep=gost}
+\captionsetup[figure]{labelformat=gostfigure}
+\captionsetup[table]{labelformat=gosttable}
+\renewcommand{\thesubfigure}{\asbuk{subfigure}}
+\captionsetup[table]{labelformat=simple, labelsep = endash, justification = raggedright, singlelinecheck = off}
+\usepackage{indentfirst}
+\graphicspath{{image/}}
+\newcommand\tline[2]{$\underset{\text{#1}}{\text{\underline{\hspace{#2}}}}$}
+
+% PGFPlots Table ========================================================
+\usepackage{pgfplotstable}
+\renewcommand{\arraystretch}{1.5}
+% recommended:
+\usepackage{booktabs}
+\usepackage{colortbl}
+% pgfplotstable settings
+\pgfplotstableset{
+    columns/w/.style = {column name = {\boldmath$\omega$}, column type = |c},
+    columns/logW/.style = {column name = {\boldmath$\lg{\omega}$}, column type = |c},
+    columns/A/.style = {column name = {\boldmath$A(\omega)$}, column type = |c},
+    columns/logA/.style = {column name = {\boldmath$20\lg{A(\omega)}$}, column type = |c},
+    columns/psi/.style = {column name = {\boldmath$\psi$}, column type = |c|},
+    every head row/.style = {before row = \hline},
+    after row = {[1mm] \hline},
+}
+
+\usepackage{amsmath}
+\usepackage{float}
+
+% Table and figure setting ==============================================
+\usepackage{threeparttable}
+%Change label separator
+\usepackage{caption}
+\captionsetup[table]{labelformat=simple, labelsep = endash, justification = raggedright, singlelinecheck = off}
+\captionsetup[figure]{labelformat=simple, labelsep = endash, name = Рисунок}
+
+% Paragraph indent
+\usepackage{indentfirst}
+\setlength{\parindent}{15mm}
+
+
+
+
+\begin{document}
+	\begin{titlepage}
+	\centering
+	{\fontsize{12pt}{5cm}\selectfont \bfseries Министерство образования и науки Российской Федерации} \\ \vspace{0.5cm}
+	{\fontsize{7pt}{5cm}\selectfont ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ} \\ 
+	\vspace{1cm}
+	{\fontsize{12pt}{5cm}\selectfont \bfseries САНКТ-ПЕТЕРБУРГСКИЙ УНИВЕРСИТЕТ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ, МЕХАНИКИ И ОПТИКИ} \\ \vspace{1.5cm}
+	
+	{\fontsize{14pt}{5cm}\selectfont Кафедра \hspace{1cm} \underline{Систем Управления и Информатики}  \hspace{1cm} Группа \underline{Р3340}} \\ 
+	\vspace{2cm}
+	
+	{\fontsize{20pt}{5cm}\selectfont \bfseries Лабораторная работа №9} \\
+	{\fontsize{20pt}{5cm}\selectfont \bfseries “Экспериментальное построение частотных характеристик типовых динамических звеньев”} \\
+	{\fontsize{14pt}{5cm}\selectfont Вариант - 11} \\
+	\vspace{1.5cm}
+	
+	\flushleft
+	
+	{Выполнил \hspace{2cm} \tline{(фамилия, и.о.)}{9cm} (подпись)} \\
+	\vspace{2cm}
+	
+	{Проверил \hspace{2cm} \tline{(фамилия, и.о.)}{9cm} (подпись)} \\
+	\vspace{5cm}
+	
+	"\underline{\hspace{0.7cm}}"\hspace{0.2cm}\underline{\hspace{2cm}}\hspace{0.2cm}20\underline{\hspace{0.7cm}}г. \hspace{2cm} Санкт-Петербург, \hspace{2cm} 20\underline{\hspace{0.7cm}}г. \\ \vspace{1cm}
+	
+	Работа выполнена с оценкой \hspace{1cm} \underline{\hspace{8cm}} \\ 
+	\vspace{1cm}
+	Дата защиты "\underline{\hspace{0.7cm}}"\hspace{0.2cm}\underline{\hspace{2cm}}\hspace{0.2cm}20\underline{\hspace{0.7cm}}г.
+	
+\end{titlepage}
+
+\begin{center}
+	\section*{Задание}
+\end{center}
+\textbf{Цель работы} - изучение частотных характеристик типовых динамических звеньев и способов их построения. \par
+Если на вход устойчивого линейного звена с передаточной функцией $W(s)$ подается гармонический сигнал $g(t) = g_m\sin{\omega t}$, то на его выходе в установившемся режиме будет гармонический сигнал $y(t) = y_m\sin{(\omega t + \psi)}$. Задача состоим в том, чтобы определить зависимость амплитуды $y_m(\omega)$ и разности фаз между выходым сигналом и входным $\psi(\omega)$ от частоты входного сигнала. Полученные графики получили название: амплитудно-частотная характеристика (АЧХ) и фазо-частотная характеристика (ФЧХ). \par
+В данной реботе необходимо получить АЧХ и ФЧХ линейных динамических звеньев, представленных в таблице 1, подставив в них параметры, указанные в таблице 2. После чего, на основе двух предыдущих характеристик, построить амплитудно-фазовую характеристику (АФЧХ).
+
+\begin{table}[h!]
+	%\tabulinesep = 2mm
+	\centering
+	\begin{threeparttable}
+		\caption{Исходные элементарные звенья}
+		\begin{tabular} {|l|c|}
+			\hline
+			Тип звена & Передаточная функция \\ [0.5cm]  \hline
+			Идеальное интегрирующее    & $\displaystyle\frac{k}{s}$ \\ [0.5cm]  \hline
+			Изодромное & $\displaystyle\frac{k(Ts + 1)}{s}$ \\ [0.5cm]  \hline
+			Дифференцирующее с замедлением & $\displaystyle\frac{ks}{Ts + 1}$ \\ [0.5cm] \hline
+		\end{tabular}
+	\end{threeparttable} 
+\end{table}
+
+\begin{table}[h!]
+	\tabulinesep = 2mm
+	\centering
+	\begin{threeparttable}
+		\caption{Параметры}\label{tab:perflogcross}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			K & T & $\xi$ \\ \hline
+			5 & 0.1 & 0.1 \\
+			\hline
+		\end{tabular}
+	\end{threeparttable} 
+\end{table}
+
+
+\newpage
+\begin{center}
+	\section{Исследование идеального интегрирующего звена}
+\end{center}
+
+В таблице 3 представлены данные, снятые по графикам переходных процессов. \par
+\begin{table}[h!]
+    \centering
+    \begin{threeparttable}
+        \caption{Полученные данные} \label{tab:perflogcross}
+        \pgfplotstabletypeset[]{data/data4.txt}
+    \end{threeparttable}
+\end{table}
+Передаточная функия исследуемого звена представлена в таблице 1. Из нее можно построить частотную функцию и найти выражения для АЧХ и ФЧХ.
+   $$W(j\omega) = W(s)\big|_{s = j\omega} = \frac{k}{j\omega} = \frac{jk\omega}{-\omega^2} = -j\frac{k}{\omega} \eqno (1)$$
+$$U(\omega) = 0 \eqno (2)$$
+$$V(\omega) = \frac{k}{\omega} = \frac{5}{\omega} \eqno (3)$$
+$$A(\omega) = \frac{5}{\omega} \eqno (4)$$
+$$L(\omega) = 20\lg{A(\omega)} = 20\lg{\frac{5}{\omega}} = 20\lg{5} - 20\lg{\omega} \eqno(5)$$
+$$\psi(\omega) = \arctg{\frac{V(\omega)}{U(\omega)}} = -\arctg{\frac{5}{\omega}} = -\arctg{\infty} = -\frac{\pi}{2} \eqno(6)$$
+
+\newpage
+Экспериментально построенные характеристики данного звена представлены ниже.
+\begin{figure}[h!]
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{semilogxaxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$\omega$, 1/c},
+                    ylabel = {$A(\omega)$},
+                ]
+                \addplot table [x={w}, y={A}] {data/data4.txt};
+            \end{semilogxaxis}
+        \end{tikzpicture}
+        \caption{График АЧХ}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{semilogxaxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$\omega$, 1/c},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={w}, y={psi}] {data/data4.txt};
+            \end{semilogxaxis}
+        \end{tikzpicture}
+        \caption{График ФЧХ}
+    \end{subfigure}
+    
+    \vspace{0.5cm}
+
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{polaraxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$A(\omega)$},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={psi}, y={A}] {data/data4.txt};
+            \end{polaraxis}
+        \end{tikzpicture}
+        \caption{График АФЧХ}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{polaraxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$L_m$, дБ},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={psi}, y={logA}] {data/data4.txt};
+            \end{polaraxis}
+        \end{tikzpicture}
+        \caption{График ЛАФЧХ}
+    \end{subfigure}
+    \caption{Частотные характеристики идеального интегрирующего звена}
+\end{figure}
+
+\newpage
+\begin{center}
+	\section{Исследование изодромного звена}
+\end{center}
+В таблице 4 представлены данные, снятые по графикам переходных процессов.
+\begin{table}[h!]
+    \centering
+    \begin{threeparttable}
+        \caption{Полученные данные}
+        \pgfplotstabletypeset[]{data/data5.txt}
+    \end{threeparttable}
+\end{table}
+
+Передаточная функия исследуемого звена представлена в таблице 1. Из нее можно построить частотную функцию и найти выражения для АЧХ и ФЧХ.
+$$W(j\omega) = W(s)\big|_{s = j\omega} = \frac{k(1 + jT\omega)}{j\omega} = \frac{-kT\omega^2 + jk\omega}{-\omega^2} = \frac{kT\omega - jk}{\omega} = kT - j\frac{k}{\omega} \eqno (7)$$
+$$U(\omega) = kT = 0.5 \eqno (8)$$
+$$V(\omega) = -\frac{k}{\omega} = -\frac{5}{\omega} \eqno (9)$$
+$$A(\omega) = \sqrt{0.25 + \displaystyle{\frac{25}{\omega^2}}} \eqno (10)$$
+$$L(\omega) = 20\lg{\sqrt{1 + \frac{4}{\omega^2}}} \eqno(11)$$
+$$\psi(\omega) = -\arctg{\frac{10}{\omega}} \eqno (12)$$
+\newpage
+\begin{figure}[h!]
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{semilogxaxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$\omega$, 1/c},
+                    ylabel = {$A(\omega)$},
+                ]
+                \addplot table [x={w}, y={A}] {data/data5.txt};
+            \end{semilogxaxis}
+        \end{tikzpicture}
+        \caption{График АЧХ}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{semilogxaxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$\omega$, 1/c},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={w}, y={psi}] {data/data5.txt};
+            \end{semilogxaxis}
+        \end{tikzpicture}
+        \caption{График ФЧХ}
+    \end{subfigure}
+    
+    \vspace{0.5cm}
+
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{polaraxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$A(\omega)$},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={psi}, y={A}] {data/data5.txt};
+            \end{polaraxis}
+        \end{tikzpicture}
+        \caption{График АФЧХ}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{polaraxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$L_m$, дБ},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={psi}, y={logA}] {data/data5.txt};
+            \end{polaraxis}
+        \end{tikzpicture}
+        \caption{График ЛАФЧХ}
+    \end{subfigure}
+    \caption{Частотные характеристики изодромного звена}
+\end{figure}
+
+\newpage
+\begin{center}
+	\section{Исследование дифференцирующего звена с замедлением}
+\end{center}
+В таблице 4 представлены данные, снятые по графикам переходных процессов. \par
+\begin{table}[h!]
+    \centering
+    \begin{threeparttable}
+        \caption{Полученные данные}
+        \pgfplotstabletypeset[]{data/data7.txt}
+    \end{threeparttable}
+\end{table}
+
+Ниже представлены выражения частотных характеристик.
+
+
+$$W(jw) = \frac{{5jw}}{{0.1jw + 1}} = \frac{{5jw(1 - 0.1jw)}}{{1 + 0.01{w^2}}} = \frac{{0.5{w^2}}}{{1 + 0.01{w^2}}} + \frac{{5w}}{{1 + 0.01{w^2}}}j\eqno (13)$$ \\
+$$U(w) = \frac{{0.5{w^2}}}{{1 + 0.01{w^2}}}\eqno (14)$$ \\
+$$V(w) = \frac{{5w}}{{1 + 0.01{w^2}}}\eqno (15)$$ \\
+$$A(w) = \sqrt {{U^2} + {V^2}}  = \sqrt {\frac{{0.25{w^4}}}{{{{(1 + 0.01{w^2})}^2}}} + \frac{{25{w^2}}}{{{{(1 + 0.01{w^2})}^2}}}}  = \frac{{5w}}{{\sqrt {1 + 0.01{w^2}} }}\eqno (16)$$ \\
+$$\psi(w) = arctg\frac{{V(w)}}{{U(w)}} = arctg\frac{{10}}{w}\eqno (17)$$
+
+
+
+
+На рисунке 3 представлены графики по данным, которые были сняты графически и полученные аналитически из выражения (8). Как видно из графиков, чем меньше частота колебаний - тем меньше амплитуда собственных колебаний системы.
+\newpage
+\begin{figure}[h!]
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{semilogxaxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$\omega$, 1/c},
+                    ylabel = {$A(\omega)$},
+                ]
+                \addplot table [x={w}, y={A}] {data/data7.txt};
+      
+            \end{semilogxaxis}
+        \end{tikzpicture}
+        \caption{График АЧХ}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{semilogxaxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$\omega$, 1/c},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={w}, y={psi}] {data/data7.txt};
+                
+            \end{semilogxaxis}
+        \end{tikzpicture}
+        \caption{График ФЧХ}
+    \end{subfigure}
+    
+    \vspace{0.5cm}
+
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{polaraxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$A(\omega)$},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={psi}, y={A}] {data/data7.txt};
+                
+            \end{polaraxis}
+        \end{tikzpicture}
+        \caption{График АФЧХ}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{polaraxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$L_m$, дБ},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={psi}, y={logA}] {data/data7.txt};
+                
+            \end{polaraxis}
+        \end{tikzpicture}
+        \caption{График ЛАФЧХ}
+    \end{subfigure}
+    \caption{Частотные характеристики дифференцирующего звена с замедлением }
+\end{figure}
+
+\newpage
+\begin{center}
+	\section{Асимптотические ЛАЧХ исследуемых звеньев}
+\end{center}
+\begin{figure}[h]
+	
+		\centering
+		\begin{tikzpicture}
+		\begin{semilogxaxis} [
+		width = 0.9\textwidth,
+		xlabel = {$\omega$, 1/c},
+		ylabel = {$L(\omega)$, Дб},
+		]
+		\addplot table [x={w}, y={logA}] {data/data7.txt};
+		\draw (1,14) --(10, 34) --(100,34);
+		\end{semilogxaxis}
+		\end{tikzpicture}
+		\caption{График ЛАЧХ дифференцирующего звена с замедлением }
+\end{figure}
+	
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+	\begin{semilogxaxis} [
+	width = 0.9\textwidth,
+	xlabel = {$\omega$, 1/c},
+	ylabel = {$L(\omega)$, Дб},
+	]
+	\addplot table [x={w}, y={logA}] {data/data4.txt};
+	\draw (1,14) --(100,-26);
+	\end{semilogxaxis}
+	\end{tikzpicture}
+	\caption{График ЛАЧХ идеального интегрирующего }
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+	\begin{semilogxaxis} [
+	width = 0.9\textwidth,
+	xlabel = {$\omega$, 1/c},
+	ylabel = {$L(\omega)$, Дб},
+	]
+	\addplot table [x={w}, y={logA}] {data/data5.txt};
+	\draw (1,14) --(10, -6) --(100,-6);
+	\draw[dashed] (0.01, 23.52) -- (0.2, 23.52);
+	\draw[dashed] (0.2, 23.52) -- (0.2, 0);
+	\end{semilogxaxis}
+	\end{tikzpicture}
+	\caption{График ЛАЧХ изодромного звена }
+\end{figure}
+
+
+\newpage
+\begin{center}
+	\section*{Выводы}
+\end{center}
+
+В данной работе мы исследовали частотные характеристике трех звеньев: Идеального интегрирующего, изодромного, и дифференцирующего с замедлением. Получили экспериментально графики частотных характеристик и сравнили их с соответствующими выражениями. \par
+Как видно из рисунка 4 и 6, при частоте $\omega_c = 1/T = 10$ ЛАЧХ изменяет наклон, что соответствует теории (наклон дифференцирующего звена с замедление изменяется с $+20$ Дб/дек до $0$ Дб/дек, изодромного соответсвенно от $-20$ Дб/дек до $0$ Дб/дек) и у идеального интегрирующего не изменяет
+
+
+\end{document}
