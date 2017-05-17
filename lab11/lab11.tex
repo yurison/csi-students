@@ -202,33 +202,31 @@ $K_{V}$=3\par
 $K_{X}$=5600\par
  
 \newpage
-\begin{figure}[h]
-	\begin{subfigure}{0.5\textwidth}
+	\begin{figure}[h]
 		\centering
-		\includegraphics[width=1.2\linewidth]{1}
-		\caption{}
+		\includegraphics[width=0.7\linewidth]{1}
+		\caption{Графика переходного процесса $U_p(t)$}
 		\label{fig:1}
-	\end{subfigure}
-	\begin{subfigure}{0.5\textwidth}
+	\end{figure}
+	\begin{figure}[h]
 		\centering
-		\includegraphics[width=1.2\linewidth]{2}
-		\caption{}
+		\includegraphics[width=0.7\linewidth]{2}
+		\caption{Графика переходного процесса $F(t)$}
 		\label{fig:2}
-	\end{subfigure}
-	\begin{subfigure}{0.5\textwidth}
+	\end{figure}
+	\begin{figure}[h]
 		\centering
-		\includegraphics[width=1.2\linewidth]{3}
-		\caption{}
+		\includegraphics[width=0.7\linewidth]{3}
+		\caption{Графика переходного процесса $V(t)$}
 		\label{fig:3}
-	\end{subfigure}
-	\begin{subfigure}{0.5\textwidth}
+	\end{figure}
+	\begin{figure}[h]
 		\centering
-		\includegraphics[width=1.2\linewidth]{4}
-		\caption{}
+		\includegraphics[width=0.7\linewidth]{4}
+		\caption{Графика переходного процесса $x(t)$}
 		\label{fig:4}
-	\end{subfigure}
-\caption{Графики переходных процессов}
-\end{figure}
+	\end{figure}
+
 
 \newpage
 \begin{center}
@@ -237,6 +235,8 @@ $K_{X}$=5600\par
 
 	\begin{table}[h!]
 		\centering
+		\begin{threeparttable}
+		
 	\caption{Характеристики системы при различной массе нагрузки }
 	\renewcommand{\arraystretch}{1}
 	\renewcommand{\tabcolsep}{0.9cm}
@@ -251,10 +251,11 @@ $K_{X}$=5600\par
 		$x,10^{-3}м$	&	0.113	&	0.113	&	0.113		\\
 		\hline
 	\end{tabular}
+\end{threeparttable}
 \end{table}
 
 Иземеняя массу нагрузки в пределах $[0.5m, 1.5m]$ получим различные виды переходных процессов с различными значениями преререгулирования $\sigma$, времени переходных процессов $t_\text{п}$, и установившегося значения выходного сигнала $x_\text{уст}$. Полученные значеня представлены в таблице 2.
-
+\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{12}
@@ -263,18 +264,20 @@ $K_{X}$=5600\par
 \end{figure}
 \newpage
 
-\begin{center}
+
 \begin{center}
 	\section{Исследование влияния постоянной времени на вид переходных процессов}
 \end{center}
-\end{center}
+
 Передаточная функция системы:\\
 \begin{equation}
 W(s)=\frac{K_UK_0}{T_Ums^3+(m+K_dT_U)s^2+(K_d+C_pT_U)s+C_p}
 \end{equation}\par
-В таблице 3 приведена зависимость характеристик системы от постоянной времени и расчитанные корни передаточной функции(1).   
+В таблице 3 приведена зависимость характеристик системы от постоянной времени и расчитанные корни передаточной функции(1). 
+  
 \begin{table}[h!]
-\caption{Характеристики системы при различной массе нагрузки }
+	\begin{threeparttable}
+\caption{Характеристики системы при различной постоянной времени  }
 \renewcommand{\arraystretch}{1}
 \renewcommand{\tabcolsep}{0.75cm}
 \begin{tabular}{|c|c|c|c|c|}
@@ -294,9 +297,10 @@ W(s)=\frac{K_UK_0}{T_Ums^3+(m+K_dT_U)s^2+(K_d+C_pT_U)s+C_p}
 	$s_3, 10^{3}$	&	-0.36+3.98i	&	-0.36+3.98i	&	-0.36+3.98i	&	-0.36+3.98i	\\
 	\hline
 \end{tabular}
+\end{threeparttable}
 \end{table}\par
 
-На рисунке 7 приведены графики переходных процессов системы при изменении постоянной времени.
+На рисунке 8 приведены графики переходных процессов системы при изменении постоянной времени.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{8}
@@ -310,7 +314,7 @@ W(s)=\frac{K_UK_0}{T_Ums^3+(m+K_dT_U)s^2+(K_d+C_pT_U)s+C_p}
 \begin{center}
 	\section{Исследование влияния коэффициента упругости $C_p$}
 \end{center} \par
-Исследуем поведение системы, варьируя $C_p$, при выключенном питании $U = 0$ и приложенном воздействии $F_B = 4$. На рисунке 6 и 7 представлены полученные в результате математического моделирования переходные процессы при различных $C_p$.
+Исследуем поведение системы, варьируя $C_p$, при выключенном питании $U = 0$ и приложенном воздействии $F_B = 4$. На рисунке 9 и 10 представлены полученные в результате математического моделирования переходные процессы при различных $C_p$.
 
 \begin{figure}[h]
 	\centering
@@ -325,7 +329,25 @@ W(s)=\frac{K_UK_0}{T_Ums^3+(m+K_dT_U)s^2+(K_d+C_pT_U)s+C_p}
 	\label{}
 \end{figure}
 \newpage
-Из передаточной функции (1) мы построим ЛАЧХ системы 
+Из передаточной функции (1) мы построим ЛАЧХ системы\par 
+
+
+\begin{equation}
+W(s) = \frac{{{K_U}{K_0}}}{{{T_u}m{s^3} + (m + {K_d}{T_u}){s^2} + ({K_d} + {C_p}{T_u})s + {C_p}}}
+\end{equation}
+
+\begin{equation}
+W(jw) = \frac{{{K_U}{K_0}}}{{({C_p} - m{w^2} - {K_d}{T_u}{w^2}) + j({C_p}{T_u} + {K_d}w - {T_u}m{w^3})}}
+\end{equation}
+
+\begin{equation}
+A(w) = \frac{{{K_U}{K_0}}}{{\sqrt {{{({C_p} - m{w^2} - {K_d}{T_u}{w^2})}^2} + {{({C_p}{T_u} + {K_d}w - {T_u}m{w^3})}^2}} }}
+\end{equation}
+
+\begin{equation}
+L(w) = 20\lg A(w)
+\end{equation}
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{10}
