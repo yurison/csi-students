@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.28)  17 MAY 2017 20:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.28)  18 MAY 2017 12:30
 entering extended mode
 **./lab11.tex
 (lab11.tex
@@ -1423,18 +1423,18 @@ Package pdftex.def Info: 4.png used on input line 225.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3 <./1.png> <./2.png (PNG copy)>]
+[3 <./1.png> <./2.png>]
 
 LaTeX Warning: Command \cyrm invalid in math mode on input line 251.
 
 Missing character: There is no ì in font cmr12!
-[4 <./3.png (PNG copy)> <./4.png (PNG copy)>]
-<12.png, id=41, 584.1825pt x 347.04657pt>
+[4 <./3.png> <./4.png>] <12.png, id=44, 584.1825pt x 347.04657pt>
 File: 12.png Graphic file (type png)
  <use 12.png>
 Package pdftex.def Info: 12.png used on input line 261.
 (pdftex.def)             Requested size: 338.58632pt x 201.14946pt.
- [5 <./12.png (PNG copy)>]
+
+[5 <./12.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 272--273
 
  []
@@ -1444,31 +1444,30 @@ Overfull \hbox (11.22968pt too wide) in paragraph at lines 280--301
 [] 
  []
 
-<8.png, id=45, 584.1825pt x 347.04657pt>
+<8.png, id=49, 584.1825pt x 347.04657pt>
 File: 8.png Graphic file (type png)
  <use 8.png>
 Package pdftex.def Info: 8.png used on input line 306.
 (pdftex.def)             Requested size: 338.58632pt x 201.14946pt.
  [6 <./8.png>]
-<9.png, id=51, 584.1825pt x 359.09157pt>
+<9.png, id=55, 584.1825pt x 359.09157pt>
 File: 9.png Graphic file (type png)
  <use 9.png>
 Package pdftex.def Info: 9.png used on input line 321.
 (pdftex.def)             Requested size: 338.58632pt x 208.13078pt.
 
-<11.png, id=52, 584.1825pt x 345.54094pt>
+<11.png, id=56, 584.1825pt x 345.54094pt>
 File: 11.png Graphic file (type png)
  <use 11.png>
 Package pdftex.def Info: 11.png used on input line 327.
 (pdftex.def)             Requested size: 338.58632pt x 200.2768pt.
- [7 <./9.png (PNG copy)> <./11.png (PNG copy)>] <10.png, id=56, 584.1825pt x 36
-5.86688pt>
+ [7 <./9.png> <./11.png>] <10.png, id=62, 584.1825pt x 365.86688pt>
 File: 10.png Graphic file (type png)
  <use 10.png>
 Package pdftex.def Info: 10.png used on input line 353.
 (pdftex.def)             Requested size: 338.58632pt x 212.05779pt.
-
-[8 <./10.png>] [9] (lab11.aux)
+ [8 <./10.png>] [9]
+(lab11.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -1499,9 +1498,9 @@ lic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 r8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on lab11.pdf (10 pages, 279455 bytes).
+Output written on lab11.pdf (10 pages, 318805 bytes).
 PDF statistics:
- 360 PDF objects out of 1000 (max. 8388607)
+ 366 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  63 words of extra memory for PDF output out of 10000 (max. 10000000)
 
